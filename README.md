@@ -58,7 +58,7 @@ Para esto debemos abrir el proyecto en Visual Studio Code y iniciar una terminal
 
 Una vez haya finalizado la instalación se mostrara un mensaje:
 
-<p align="center"><img src="./resources/images/laravel_successful.png" width="600"></p>
+<p align="center"><img src="./resources/images/laravel_successful.png" width="800"></p>
 
 Podemos probar el funcionamiento del proyecto ejecutando:
 

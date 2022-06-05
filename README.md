@@ -8,7 +8,7 @@ Esta aplicación fue generada con ayuda de [Laravel Jetstream](https://jetstream
 
 ## Diagrama de la BDD
 A continuación se muestra el diagrama de la base de datos utilizada en el proyecto:
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="./resources/images/db_peliculas.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="./resources/images/db_peliculas.png" width="900"></a></p>
 
 
 
@@ -48,7 +48,7 @@ laravel new peliculas --jet
 `````` 
 Esto ejecutara el laravel/instaler que nos ayudara a crear el proyecto, debemos escoger la opcion de ``livewire`` escribiendo ``0``,  seguido de esto debemos escoger si la aplicación va a usar teams y ponemos ``no``:
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="./resources/images/laravel_installer.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="./resources/images/laravel_installer.png" width="900"></a></p>
 
 Despues debemos esperar a que el proyecto se termine de crear nos pedira ejecutar el comando:
 ````
@@ -103,7 +103,7 @@ protected $table = 'socio';
 
 Una vez realizados estos pasos deberiamos ser capaces de ver el listado de socios.
 
-<p align="center"><img src="./resources/images/socio_screen.png" width="400"></p>
+<p align="center"><img src="./resources/images/socio_screen.png" width="900"></p>
 
 
 

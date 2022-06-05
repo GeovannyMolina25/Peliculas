@@ -25,6 +25,14 @@ Para esto debes abrir el proyecto con [VS Code](https://code.visualstudio.com/) 
 npm install
 `````` 
 
+Tambien es necesario reconstruir las dependencias de composer con:
+
+`````` 
+composer install
+`````` 
+
+y finalmente configurar generar el archivo .env
+
 ## 3. Reconstruir la base de datos
 La base de datos esta diseñada en MySQL con la ayuda de [XAMPP](https://www.apachefriends.org/es/index.html) para reconstruir la BDD es necesario importar el script contenido en la ruta
 ``/database/db_peliculas.sql`` desde [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/) para lo que debemos crear una base de datos con el nombre ``peliculas``, seguido de esto le damos a importar y una vez terminada la importación la base de datos estaria lista para utilizarse.

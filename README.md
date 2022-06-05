@@ -1,6 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://www.espe.edu.ec/wp-content/uploads/2022/01/ESPEtransparente.png" width="400"></a></p>
-
-
 ## Acerca del Proyecto
 
 Esta aplicación fue generada con ayuda de [Laravel Jetstream](https://jetstream.laravel.com/2.x/introduction.html), [Composer](https://getcomposer.org) y [LiveWire CRUD Generator](https://github.com/flightsadmin/livewire-crud) esta basada en una tienda de alquiler de peliculas.
@@ -61,7 +58,7 @@ Para esto debemos abrir el proyecto en Visual Studio Code y iniciar una terminal
 
 Una vez haya finalizado la instalación se mostrara un mensaje:
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="./resources/images/laravel_successful.png" width="400"></a></p>
+<p align="center"><img src="./resources/images/laravel_successful.png" width="600"></p>
 
 Podemos probar el funcionamiento del proyecto ejecutando:
 
@@ -70,7 +67,7 @@ php artisan serve
 ``````
 y dirigiendonos a la siguiente [direccion](127.0.0.1:8000/), si todos los pasos previos fueron realizados podremos ver la siguiente pantalla:
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="./resources/images/home_screen.png" width="400"></a></p>
+<p align="center"><img src="./resources/images/home_screen.png" width="600"></p>
 
 Lo siguiente que debemos hacer es instalar el 
 [LiveWire CRUD Generator](https://github.com/flightsadmin/livewire-crud) via composer, para lo que dentro de la carpeta de nuestro proyecto debemos ejecutar el comando:
@@ -90,7 +87,7 @@ Esto lo hacemos con todas las tablas mostradas en el [Diagrama](#diagrama-de-la-
 ## Manejo de los Errores de Pluralización
 Uno de los errores más comunes que puedes presentar con el uso de este generador CRUD es que este pluraliza los nombres de las bases de datos, es decir si nosotros tenemos una tabla ``socio`` el generador le asignara el nombre de ``socios`` esto puede ocasionar varios errores como:
 
-- Que no encuentre las vistas
+
 ````
 View [livewire.socio.index] not found.
 ````
@@ -107,6 +104,8 @@ protected $table = 'socio';
 Una vez realizados estos pasos deberiamos ser capaces de ver el listado de socios.
 
 <p align="center"><img src="./resources/images/socio_screen.png" width="400"></p>
+
+
 
 ## Licencia
 

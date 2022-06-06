@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Pelicula;
+use App\Models\Genero;
+use App\Models\Director;
+use App\Models\Formato;
 
 class Peliculas extends Component
 {
@@ -16,8 +19,11 @@ class Peliculas extends Component
 
     public function render()
     {
+        $generos=Genero::pluck('gen_nombre','id');
+        $directores=Director::pluck('dir_nombre','id');
+        $formatos=Formato::pluck('for_nombre','id');
 		$keyWord = '%'.$this->keyWord .'%';
-        return view('livewire.peliculas.view', [
+        return view('livewire.peliculas.view', ['generos' => $generos, 'directores' => $directores, 'formatos' => $formatos],[
             'peliculas' => Pelicula::latest()
 						->orWhere('gen_id', 'LIKE', $keyWord)
 						->orWhere('dir_id', 'LIKE', $keyWord)

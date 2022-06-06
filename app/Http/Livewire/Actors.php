@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Actor;
+use App\Models\Sexo;
 
 class Actors extends Component
 {
@@ -17,7 +18,8 @@ class Actors extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
-        return view('livewire.actors.view', [
+        $sexos = Sexo::pluck('sex_nombre','id');
+        return view('livewire.actors.view', ['sexos' => $sexos] , [
             'actors' => Actor::latest()
 						->orWhere('sex_id', 'LIKE', $keyWord)
 						->orWhere('act_nombre', 'LIKE', $keyWord)

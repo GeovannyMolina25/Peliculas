@@ -13,7 +13,11 @@
 					<input type="hidden" wire:model="selected_id">
             <div class="form-group">
                 <label for="sex_id"></label>
-                <input wire:model="sex_id" type="text" class="form-control" id="sex_id" placeholder="Sex Id">@error('sex_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select wire:model="sex_id" name="sex_id" id="sex_id" class="form-control">
+                    @foreach($sexos as $sex_id=>$sex_nombre)
+							<option value="{{$sex_id}}">{{$sex_nombre}}</option>
+					@endforeach
+                </select>@error('sex_id') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="act_nombre"></label>

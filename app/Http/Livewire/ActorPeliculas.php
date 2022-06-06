@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\ActorPelicula;
+use App\Models\Actor;
+use App\Models\Pelicula;
 
 class ActorPeliculas extends Component
 {
@@ -17,7 +19,9 @@ class ActorPeliculas extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
-        return view('livewire.actor-peliculas.view', [
+        $actores = Actor::pluck('act_nombre','id');
+        $peliculas=Pelicula::pluck('pel_nombre','id');
+        return view('livewire.actor-peliculas.view',['peliculas' => $peliculas, 'actores' => $actores], [
             'ActorPeliculas' => ActorPelicula::latest()
 						->orWhere('act_id', 'LIKE', $keyWord)
 						->orWhere('pel_id', 'LIKE', $keyWord)

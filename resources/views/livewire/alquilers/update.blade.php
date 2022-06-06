@@ -11,13 +11,21 @@
             <div class="modal-body">
                 <form>
 					<input type="hidden" wire:model="selected_id">
-            <div class="form-group">
+                    <div class="form-group">
                 <label for="soc_id"></label>
-                <input wire:model="soc_id" type="text" class="form-control" id="soc_id" placeholder="Soc Id">@error('soc_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select wire:model="soc_id" name="soc_id" id="soc_id" class="form-control">
+                    @foreach($socios as $soc_id=>$soc_nombre)
+							<option value="{{$soc_id}}">{{$soc_nombre}}</option>
+					@endforeach
+                </select>@error('soc_id') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="pel_id"></label>
-                <input wire:model="pel_id" type="text" class="form-control" id="pel_id" placeholder="Pel Id">@error('pel_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select wire:model="pel_id" name="pel_id" id="pel_id" class="form-control">
+                    @foreach($peliculas as $pel_id=>$pel_nombre)
+							<option value="{{$pel_id}}">{{$pel_nombre}}</option>
+					@endforeach
+                </select>@error('pel_id') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="alq_fecha_desde"></label>

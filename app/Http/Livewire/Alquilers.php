@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Alquiler;
+use App\Models\Pelicula;
+use App\Models\Socio;
 
 class Alquilers extends Component
 {
@@ -17,7 +19,9 @@ class Alquilers extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
-        return view('livewire.alquilers.view', [
+        $peliculas=Pelicula::pluck('pel_nombre','id');
+        $socios=Socio::pluck('soc_nombre','id');
+        return view('livewire.alquilers.view', ['peliculas' => $peliculas, 'socios' => $socios], [
             'alquilers' => Alquiler::latest()
 						->orWhere('soc_id', 'LIKE', $keyWord)
 						->orWhere('pel_id', 'LIKE', $keyWord)

@@ -45,9 +45,9 @@
 							@foreach($peliculas as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->gen_id }}</td>
-								<td>{{ $row->dir_id }}</td>
-								<td>{{ $row->for_id }}</td>
+								<td>{{ $generos[$row->gen_id] }}</td>
+								<td>{{ $directores[$row->dir_id] }}</td>
+								<td>{{ $formatos[$row->for_id] }}</td>
 								<td>{{ $row->pel_nombre }}</td>
 								<td>{{ $row->pel_costo }}</td>
 								<td>{{ $row->pel_fecha_estreno }}</td>

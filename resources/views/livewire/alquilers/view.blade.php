@@ -6,8 +6,8 @@
 				<div class="card-header">
 					<div style="display: flex; justify-content: space-between; align-items: center;">
 						<div class="float-left">
-							<h4><i class="fab fa-laravel text-info"></i>
-							Alquiler Listing </h4>
+							<h4><i class="fas fa-dollar-sign text-info"></i>
+							Listado Alquileres </h4>
 						</div>
 						<div wire:poll.60s>
 							<code><h5>{{ now()->format('H:i:s') }} UTC</h5></code>
@@ -16,10 +16,10 @@
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Alquilers">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Alquileres">
 						</div>
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Add Alquilers
+						<i class="fa fa-plus"></i>  Añadir Alquileres
 						</div>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Actions
+									Acciones
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
 									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>							 

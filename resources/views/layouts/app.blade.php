@@ -37,31 +37,31 @@
                     <ul class="navbar-nav mr-auto">
 						<!--Nav Bar Hooks - Do not delete!!-->
 						<li class="nav-item">
-                            <a href="{{ url('/pelicula') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Pelicula</a> 
+                            <a href="{{ url('/pelicula') }}" class="nav-link"><i class="fas fa-film text-info"></i> Pelicula</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/alquiler') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Alquiler</a> 
+                            <a href="{{ url('/alquiler') }}" class="nav-link"><i class="fas fa-dollar-sign text-info"></i> Alquiler</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/socio') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Socio</a> 
+                            <a href="{{ url('/socio') }}" class="nav-link"><i class="fas fa-handshake text-info"></i> Socio</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/formato') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Formato</a> 
+                            <a href="{{ url('/formato') }}" class="nav-link"><i class="fas fa-file-video text-info"></i> Formato</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/director') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Director</a> 
+                            <a href="{{ url('/director') }}" class="nav-link"><i class="fas fa-video text-info"></i> Director</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/genero') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Genero</a> 
+                            <a href="{{ url('/genero') }}" class="nav-link"><i class="fas fa-box-open text-info"></i> Genero</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/actor_pelicula') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Actor_pelicula</a> 
+                            <a href="{{ url('/actor_pelicula') }}" class="nav-link"><i class="fas fa-user-tie text-info"></i> Actor pelicula</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/actor') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Actor</a> 
+                            <a href="{{ url('/actor') }}" class="nav-link"><i class="fas fa-user text-info"></i> Actor</a> 
                         </li>
 						<li class="nav-item">
-                            <a href="{{ url('/sexo') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Sexo</a> 
+                            <a href="{{ url('/sexo') }}" class="nav-link"><i class="fas fa-venus-mars text-info"></i> Sexo</a> 
                         </li>
                     </ul>
 					@endauth()

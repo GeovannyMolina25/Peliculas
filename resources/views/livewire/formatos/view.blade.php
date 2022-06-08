@@ -32,8 +32,8 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>For Nombre</th>
-								<td>ACTIONS</td>
+								<th>Formato</th>
+								<td>Opciones</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -47,8 +47,8 @@
 									Acciones
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
-									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>							 
-									<a class="dropdown-item" onclick="confirm('Confirm Delete Formato id {{$row->id}}? \nDeleted Formatos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a>   
+									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Editar </a>							 
+									<a class="dropdown-item" onclick="confirm('Confirm Delete Formato id {{$row->id}}? \nDeleted Formatos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a>   
 									</div>
 								</div>
 								</td>

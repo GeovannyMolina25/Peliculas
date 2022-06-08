@@ -23,7 +23,6 @@
             <div class="form-group">
                 <label for="pel_id"></label>
                 <select wire:model="pel_id" name="pel_id" id="pel_id" class="form-control">
-                    <option value="0" select>Seleccione una opción</option>    
                     @foreach($peliculas as $pel_id=>$pel_nombre)
 							<option value="{{$pel_id}}">{{$pel_nombre}}</option>
 					@endforeach
@@ -37,8 +36,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Save</button>
+                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
             </div>
        </div>
     </div>

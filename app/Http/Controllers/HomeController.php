@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $wordlist = Wordlist::where('id', '<=', $correctedComparisons)->get();
+        $wordCount = $wordlist->count();
+        return view('home',['wordCount'=>$wordCount]);
     }
 }

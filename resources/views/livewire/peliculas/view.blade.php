@@ -32,12 +32,12 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Gen Id</th>
-								<th>Dir Id</th>
-								<th>For Id</th>
-								<th>Pel Nombre</th>
-								<th>Pel Costo</th>
-								<th>Pel Fecha Estreno</th>
+								<th>Genero</th>
+								<th>Director</th>
+								<th>Formato</th>
+								<th>Pelicula</th>
+								<th>Costo</th>
+								<th>Fecha Estreno</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -57,8 +57,8 @@
 									Acciones
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
-									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>							 
-									<a class="dropdown-item" onclick="confirm('Confirm Delete Pelicula id {{$row->id}}? \nDeleted Peliculas cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a>   
+									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Editar </a>							 
+									<a class="dropdown-item" onclick="confirm('Confirm Delete Pelicula id {{$row->id}}? \nDeleted Peliculas cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a>   
 									</div>
 								</div>
 								</td>

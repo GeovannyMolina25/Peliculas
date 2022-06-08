@@ -32,13 +32,13 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Soc Id</th>
-								<th>Pel Id</th>
-								<th>Alq Fecha Desde</th>
-								<th>Alq Fecha Hasta</th>
-								<th>Alq Valor</th>
-								<th>Alq Fecha Entrega</th>
-								<td>ACTIONS</td>
+								<th>Socio</th>
+								<th>Pelicula</th>
+								<th>Alquilado Desde</th>
+								<th>Alquilado Hasta</th>
+								<th>Valor</th>
+								<th>Fecha Entrega</th>
+								<td>Opciones</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -57,8 +57,8 @@
 									Acciones
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
-									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>							 
-									<a class="dropdown-item" onclick="confirm('Confirm Delete Alquiler id {{$row->id}}? \nDeleted Alquilers cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a>   
+									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Editar </a>							 
+									<a class="dropdown-item" onclick="confirm('Confirm Delete Alquiler id {{$row->id}}? \nDeleted Alquilers cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a>   
 									</div>
 								</div>
 								</td>

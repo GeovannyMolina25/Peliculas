@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New Actor</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear Nuevo Actor</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -13,6 +13,7 @@
             <div class="form-group">
                 <label for="sex_id"></label>
                 <select wire:model="sex_id" name="sex_id" id="sex_id" class="form-control">
+                    <option value="0" select>Seleccione una opción</option>
                     @foreach($sexos as $sex_id=>$sex_nombre)
 							<option value="{{$sex_id}}">{{$sex_nombre}}</option>
 					@endforeach

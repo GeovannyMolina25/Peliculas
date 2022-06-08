@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Update Alquiler</h5>
+                <h5 class="modal-title" id="updateModalLabel">Actualizar Alquiler</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span wire:click.prevent="cancel()" aria-hidden="true">×</span>
                 </button>
@@ -14,6 +14,7 @@
                     <div class="form-group">
                 <label for="soc_id"></label>
                 <select wire:model="soc_id" name="soc_id" id="soc_id" class="form-control">
+                    <option value="0" select>Seleccione una opción</option>
                     @foreach($socios as $soc_id=>$soc_nombre)
 							<option value="{{$soc_id}}">{{$soc_nombre}}</option>
 					@endforeach
@@ -22,6 +23,7 @@
             <div class="form-group">
                 <label for="pel_id"></label>
                 <select wire:model="pel_id" name="pel_id" id="pel_id" class="form-control">
+                    <option value="0" select>Seleccione una opción</option>
                     @foreach($peliculas as $pel_id=>$pel_nombre)
 							<option value="{{$pel_id}}">{{$pel_nombre}}</option>
 					@endforeach

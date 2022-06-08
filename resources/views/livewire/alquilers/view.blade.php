@@ -45,8 +45,8 @@
 							@foreach($alquilers as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->soc_id }}</td>
-								<td>{{ $row->pel_id }}</td>
+								<td>{{ $row->socio->soc_nombre }}</td>
+								<td>{{ $row->pelicula->pel_nombre }}</td>
 								<td>{{ $row->alq_fecha_desde }}</td>
 								<td>{{ $row->alq_fecha_hasta }}</td>
 								<td>{{ $row->alq_valor }}</td>

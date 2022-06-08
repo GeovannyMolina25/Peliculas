@@ -42,8 +42,8 @@
 							@foreach($ActorPeliculas as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->act_id }}</td>
-								<td>{{ $row->pel_id }}</td>
+								<td>{{ $row->actor->act_nombre }}</td>
+								<td>{{ $row->pelicula->pel_nombre }}</td>
 								<td>{{ $row->apl_papel }}</td>
 								<td width="90">
 								<div class="btn-group">

@@ -41,7 +41,7 @@
 							@foreach($actors as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->sex_id }}</td>
+								<td>{{ $row->sexo->sex_nombre }}</td>
 								<td>{{ $row->act_nombre }}</td>
 								<td width="90">
 								<div class="btn-group">

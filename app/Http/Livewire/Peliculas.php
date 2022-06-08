@@ -18,11 +18,10 @@ class Peliculas extends Component
     public $updateMode = false;
 
     public function render()
-    {
-        
-        $generos=(Genero::pluck('gen_nombre','id'))->toArray();
-        $directores=(Director::pluck('dir_nombre','id'))->toArray();
-        $formatos=(Formato::pluck('for_nombre','id'))->toArray();
+    {    
+        $generos=Genero::pluck('gen_nombre','id');
+        $directores=Director::pluck('dir_nombre','id');
+        $formatos=Formato::pluck('for_nombre','id');
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.peliculas.view', ['generos' => $generos, 'directores' => $directores, 'formatos' => $formatos],[
             'peliculas' => Pelicula::latest()

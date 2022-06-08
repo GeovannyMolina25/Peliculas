@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New Pelicula</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear nueva pelicula</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -17,6 +17,7 @@
             <div class="form-group">
                 <label for="gen_id"></label>
                 <select wire:model="gen_id" name="gen_id" id="gen_id" class="form-control">
+                    <option value="0" select>Seleccione una opción</option>
                     @foreach($generos as $gen_id=>$gen_nombre)
 							<option value={{$gen_id}}>{{$gen_nombre}}</option>
 					@endforeach

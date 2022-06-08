@@ -58,7 +58,7 @@
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
 									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Editar </a>							 
-									<a class="dropdown-item" onclick="confirm('Confirm Delete Alquiler id {{$row->id}}? \nDeleted Alquilers cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a>   
+									<a class="dropdown-item" onclick="confirm('Confirma Eliminar Alquiler id {{$row->id}}? \nUna vez eliminado el Alquiler no se puede recuperar!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a>   
 									</div>
 								</div>
 								</td>

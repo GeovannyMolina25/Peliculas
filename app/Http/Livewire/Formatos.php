@@ -47,7 +47,7 @@ class Formatos extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Formato Successfully created.');
+		session()->flash('message', 'Formato creado Correctamente.');
     }
 
     public function edit($id)
@@ -74,7 +74,7 @@ class Formatos extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Formato Successfully updated.');
+			session()->flash('message', 'Formato actualizado Correctamente.');
         }
     }
 

@@ -68,7 +68,7 @@ class Alquilers extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Alquiler Successfully created.');
+		session()->flash('message', 'Alquiler creado Correctamente.');
     }
 
     public function edit($id)
@@ -107,7 +107,7 @@ class Alquilers extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Alquiler Successfully updated.');
+			session()->flash('message', 'Alquiler actualizado Correctamente.');
         }
     }
 

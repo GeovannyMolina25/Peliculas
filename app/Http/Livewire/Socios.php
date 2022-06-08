@@ -63,7 +63,7 @@ class Socios extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Socio Successfully created.');
+		session()->flash('message', 'Socio creado Correctamente.');
     }
 
     public function edit($id)
@@ -102,7 +102,7 @@ class Socios extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Socio Successfully updated.');
+			session()->flash('message', 'Socio actualizado Correctamente.');
         }
     }
 

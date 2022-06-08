@@ -52,7 +52,7 @@ class Actors extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Actor Successfully created.');
+		session()->flash('message', 'Actor creado Correctamente.');
     }
 
     public function edit($id)
@@ -81,7 +81,7 @@ class Actors extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Actor Successfully updated.');
+			session()->flash('message', 'Actor actualizado Correctamente.');
         }
     }
 

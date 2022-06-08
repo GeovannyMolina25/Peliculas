@@ -57,7 +57,7 @@ class ActorPeliculas extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'ActorPelicula Successfully created.');
+		session()->flash('message', 'ActorPelicula creado Correctamente.');
     }
 
     public function edit($id)

@@ -47,7 +47,7 @@ class Sexos extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Sexo Successfully created.');
+		session()->flash('message', 'Sexo creado Correctamente.');
     }
 
     public function edit($id)
@@ -74,7 +74,7 @@ class Sexos extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Sexo Successfully updated.');
+			session()->flash('message', 'Sexo actualizado Correctamente.');
         }
     }
 

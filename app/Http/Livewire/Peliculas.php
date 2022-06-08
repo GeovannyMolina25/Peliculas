@@ -69,7 +69,7 @@ class Peliculas extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Pelicula Successfully created.');
+		session()->flash('message', 'Pelicula creado Correctamente.');
     }
 
     public function edit($id)
@@ -107,7 +107,7 @@ class Peliculas extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Pelicula Successfully updated.');
+			session()->flash('message', 'Pelicula actualizado Correctamente.');
         }
     }
 

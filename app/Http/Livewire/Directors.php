@@ -47,7 +47,7 @@ class Directors extends Component
         
         $this->resetInput();
 		$this->emit('closeModal');
-		session()->flash('message', 'Director Successfully created.');
+		session()->flash('message', 'Director creado Correctamente.');
     }
 
     public function edit($id)
@@ -74,7 +74,7 @@ class Directors extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'Director Successfully updated.');
+			session()->flash('message', 'Director actualizado Correctamente.');
         }
     }
 

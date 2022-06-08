@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="act_nombre"></label>
-                <input wire:model="act_nombre" type="text" class="form-control" id="act_nombre" placeholder="Act Nombre">@error('act_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="act_nombre" type="text" class="form-control" id="act_nombre" placeholder="Nombre Actor">@error('act_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="apl_papel"></label>
-                <input wire:model="apl_papel" type="text" class="form-control" id="apl_papel" placeholder="Apl Papel">@error('apl_papel') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="apl_papel" type="text" class="form-control" id="apl_papel" placeholder="Papel">@error('apl_papel') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

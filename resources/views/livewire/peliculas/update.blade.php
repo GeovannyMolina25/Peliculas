@@ -42,15 +42,15 @@
             
             <div class="form-group">
                 <label for="pel_nombre"></label>
-                <input wire:model="pel_nombre" type="text" class="form-control" id="pel_nombre" placeholder="Pel Nombre">@error('pel_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_nombre" type="text" class="form-control" id="pel_nombre" placeholder="Nombre Pelicula">@error('pel_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="pel_costo"></label>
-                <input wire:model="pel_costo" type="text" class="form-control" id="pel_costo" placeholder="Pel Costo">@error('pel_costo') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_costo" type="text" class="form-control" id="pel_costo" placeholder="Costo">@error('pel_costo') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="pel_fecha_estreno"></label>
-                <input wire:model="pel_fecha_estreno" type="text" class="form-control" id="pel_fecha_estreno" placeholder="Pel Fecha Estreno">@error('pel_fecha_estreno') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_fecha_estreno" type="text" class="form-control" id="pel_fecha_estreno" placeholder="Fecha Estreno">@error('pel_fecha_estreno') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

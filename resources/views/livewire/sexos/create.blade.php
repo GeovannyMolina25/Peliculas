@@ -12,7 +12,7 @@
 				<form>
             <div class="form-group">
                 <label for="sex_nombre"></label>
-                <input wire:model="sex_nombre" type="text" class="form-control" id="sex_nombre" placeholder="Sex Nombre">@error('sex_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="sex_nombre" type="text" class="form-control" id="sex_nombre" placeholder="Sexo">@error('sex_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

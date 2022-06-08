@@ -38,7 +38,7 @@
 								<th>Pelicula</th>
 								<th>Costo</th>
 								<th>Fecha Estreno</th>
-								<td>ACTIONS</td>
+								<td>Opciones</td>
 							</tr>
 						</thead>
 						<tbody>

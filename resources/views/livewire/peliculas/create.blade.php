@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label for="gen_id"></label>
                 <select wire:model="gen_id" name="gen_id" id="gen_id" class="form-control">
-                    <option value="0" select>Seleccione una opción</option>
+                <option value="1" selected>Seleccione una opción</option>
                     @foreach($generos as $gen_id=>$gen_nombre)
 							<option value={{$gen_id}}>{{$gen_nombre}}</option>
 					@endforeach
@@ -28,7 +28,7 @@
                 <label for="dir_id"></label>
                 <!-- <input wire:model="dir_id" type="text" class="form-control" id="dir_id" placeholder="Dir Id">@error('dir_id') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select wire:model="dir_id" name="dir_id" id="dir_id" class="form-control">
-                <option value="" selected disabled hidden>Seleccione uno</option>
+                <option value="1" selected>Seleccione una opción</option>
                     @foreach($directores as $dir_id=>$dir_nombre)
 							<option value={{$dir_id}}>{{$dir_nombre}}</option>
 					@endforeach
@@ -38,7 +38,7 @@
             <div class="form-group">
             <label for="for_id"></label>
             <select wire:model="for_id" name="for_id" id="for_id" class="form-control">
-                    <option value="" selected disabled hidden>Seleccione uno</option>
+                <option value="1" selected>Seleccione una opción</option>
                     @foreach($formatos as $for_id=>$for_nombre)
 							<option value={{$for_id}}>{{$for_nombre}}</option>
 					@endforeach
@@ -47,15 +47,15 @@
             
             <div class="form-group">
                 <label for="pel_nombre"></label>
-                <input wire:model="pel_nombre" type="text" class="form-control" id="pel_nombre" placeholder="Pel Nombre">@error('pel_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_nombre" type="text" class="form-control" id="pel_nombre" placeholder="Nombre Pelicula">@error('pel_nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="pel_costo"></label>
-                <input wire:model="pel_costo" type="text" class="form-control" id="pel_costo" placeholder="Pel Costo">@error('pel_costo') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_costo" type="text" class="form-control" id="pel_costo" placeholder="Costo">@error('pel_costo') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="pel_fecha_estreno"></label>
-                <input wire:model="pel_fecha_estreno" type="text" class="form-control" id="pel_fecha_estreno" placeholder="Pel Fecha Estreno">@error('pel_fecha_estreno') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_fecha_estreno" type="text" class="form-control" id="pel_fecha_estreno" placeholder="Fecha Estreno">@error('pel_fecha_estreno') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

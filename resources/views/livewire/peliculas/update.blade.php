@@ -50,7 +50,7 @@
             </div>
             <div class="form-group">
                 <label for="pel_fecha_estreno"></label>
-                <input wire:model="pel_fecha_estreno" type="text" class="form-control" id="pel_fecha_estreno" placeholder="Fecha Estreno">@error('pel_fecha_estreno') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="pel_fecha_estreno" type="date" class="form-control" id="pel_fecha_estreno" placeholder="Fecha Estreno">@error('pel_fecha_estreno') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

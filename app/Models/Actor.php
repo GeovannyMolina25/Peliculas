@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actor extends Model
 {
-	use HasFactory;
+	use HasFactory; 
 	
     public $timestamps = true;
 

@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
                 <label for="alq_fecha_desde"></label>
-                <input wire:model="alq_fecha_desde" type="text" class="form-control" id="alq_fecha_desde" placeholder="Fecha Desde">@error('alq_fecha_desde') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="alq_fecha_desde" type="date" class="form-control" id="alq_fecha_desde" placeholder="Fecha Desde">@error('alq_fecha_desde') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="alq_fecha_hasta"></label>
-                <input wire:model="alq_fecha_hasta" type="text" class="form-control" id="alq_fecha_hasta" placeholder="Fecha Hasta">@error('alq_fecha_hasta') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="alq_fecha_hasta" type="date" class="form-control" id="alq_fecha_hasta" placeholder="Fecha Hasta">@error('alq_fecha_hasta') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="alq_valor"></label>
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="alq_fecha_entrega"></label>
-                <input wire:model="alq_fecha_entrega" type="text" class="form-control" id="alq_fecha_entrega" placeholder="Fecha Entrega">@error('alq_fecha_entrega') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="alq_fecha_entrega" type="date" class="form-control" id="alq_fecha_entrega" placeholder="Fecha Entrega">@error('alq_fecha_entrega') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

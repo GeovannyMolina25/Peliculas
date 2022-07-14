@@ -148,8 +148,7 @@ class HomeController extends Controller
         $generos = Genero::all();
         $formatos = Formato::all();
         
-        //$dataNum_F = Pelicula::whereBetween('updated_at',['2021-06-05','2022-07-07'])->count();
-        //$dataNum_P = Pelicula::all()->count();
+    
         
         $data =[];
         $dataP =[];
@@ -167,12 +166,7 @@ class HomeController extends Controller
             //$data['labelP'] = Socio::all()->where('soc_nombre',$peliculas->id)->count();
         }
         
-        /*
-        foreach($peliculas as $pelicula){
-            $dataP['labelP'][] = $pelicula->pel_nombre;
-            $dataP['dataP'][] = Alquiler::all()->where('pel_id',$pelicula->id)->count();
-        }
-        */
+      
         $data['data'] = json_encode($data);
         //$dataP['data'] = json_encode($dataP);
         

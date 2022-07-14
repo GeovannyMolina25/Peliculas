@@ -36,7 +36,7 @@ Route::get('reports/rental',[App\Http\Controllers\HomeController::class, 'rental
 Route::get('reports/economy',[App\Http\Controllers\HomeController::class, 'economy'])->name('reports.economy');
 Route::get('reports/movieRental',[App\Http\Controllers\HomeController::class, 'movieRental'])->name('reports.movieRental');
 
-//rutas de los pdfs
+//rutas de los pdfs creados
 Route::get('pdfs/economy',[App\Http\Controllers\HomeController::class, 'economyPDF'])->name('pdfs.economy');
 Route::get('pdf/movieRental',[App\Http\Controllers\HomeController::class, 'movieRentalPDF'])->name('pdfs.movieRental');
 

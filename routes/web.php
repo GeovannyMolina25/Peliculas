@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
+/*Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -26,10 +26,22 @@ Route::middleware([
         return view('home');
     })->name('dashboard');
 });
+*/
 
 Auth::routes();
+// rutas de los reportes
+Route::get('reports/movie',[App\Http\Controllers\HomeController::class, 'movie'])->name('reports.movie');
+Route::get('reports/partner',[App\Http\Controllers\HomeController::class, 'partner'])->name('reports.partner');
+Route::get('reports/rental',[App\Http\Controllers\HomeController::class, 'rental'])->name('reports.rental');
+Route::get('reports/economy',[App\Http\Controllers\HomeController::class, 'economy'])->name('reports.economy');
+Route::get('reports/movieRental',[App\Http\Controllers\HomeController::class, 'movieRental'])->name('reports.movieRental');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//rutas de los pdfs
+Route::get('pdfs/economy',[App\Http\Controllers\HomeController::class, 'economyPDF'])->name('pdfs.economy');
+Route::get('pdf/movieRental',[App\Http\Controllers\HomeController::class, 'movieRentalPDF'])->name('pdfs.movieRental');
+
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::resource('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Route Hooks - Do not delete//
 	Route::view('pelicula', 'livewire.peliculas.index')->middleware('auth');
@@ -41,3 +53,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 	Route::view('actor_pelicula', 'livewire.actor-peliculas.index')->middleware('auth');
 	Route::view('actor', 'livewire.actors.index')->middleware('auth');
 	Route::view('sexo', 'livewire.sexos.index')->middleware('auth');
+	
+	

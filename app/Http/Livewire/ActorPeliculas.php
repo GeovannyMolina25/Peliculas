@@ -88,7 +88,7 @@ class ActorPeliculas extends Component
 
             $this->resetInput();
             $this->updateMode = false;
-			session()->flash('message', 'ActorPelicula Successfully updated.');
+			session()->flash('message', 'ActorPelicula actualizado Correctamente.');
         }
     }
 

@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-		"@fortawesome/fontawesome-free": "^5.15.4",
+        "@fortawesome/fontawesome-free": "^5.15.4",
         "axios": "^0.25",
         "bootstrap": "^4.6.1",
         "cross-env": "^7.0",
@@ -22,5 +22,13 @@
         "sass": "^1.29.0",
         "sass-loader": "^8.0.2",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@fullcalendar/core": "^5.11.0",
+        "@fullcalendar/daygrid": "^5.11.0",
+        "@fullcalendar/list": "^5.11.0",
+        "@fullcalendar/timegrid": "^5.11.0",
+        "chart.js": "^3.8.0",
+        "datatables.net": "^1.12.1"
     }
 }

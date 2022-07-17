@@ -42,7 +42,6 @@ Route::get('downloads/economy',[App\Http\Controllers\HomeController::class, 'dow
 Route::get('downloads/movieRental',[App\Http\Controllers\HomeController::class, 'downloadMovieRental'])->name('downloads.movieRental');
 
 
-
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::resource('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

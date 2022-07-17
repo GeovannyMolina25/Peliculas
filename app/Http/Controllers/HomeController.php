@@ -90,6 +90,7 @@ class HomeController extends Controller
         $peliculas = Pelicula::paginate();
         $pdf = PDF::loadView('downloads.economy',[
             'peliculas'=>$peliculas
+
         ]);
         
         return $pdf->download('___economy.pdf');
@@ -124,8 +125,7 @@ class HomeController extends Controller
         return $pdf->download('___movieRental.pdf');
         
     }
-
-
+ 
 
 
     public function index()

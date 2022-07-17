@@ -58,30 +58,7 @@ class ApisController extends Controller
 
 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $peliculas = new Pelicula;
-        $peliculas-> nombre_id = $request ->imput('nombre_id');
-        $peliculas -> save();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return Pelicula::findOrfail($id);
-    }
-
+ 
     /**
      * Show the form for editing the specified resource.
      *

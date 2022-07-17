@@ -30,11 +30,11 @@
                         <tbody>
                             @foreach($alquileres as $alquiler)
                                 <tr>
-                                    <td>{{$alquiler -> socio -> soc_nombre }}</td>
-                                    <td>{{$alquiler -> pelicula -> pel_nombre}}</td>
+                                    <td>{{$alquiler ->socio -> soc_nombre}}</td>
+                                    <td>{{$alquiler -> pelicula ->pel_nombre}}</td>
                                     <td>{{$alquiler ->pel_id}}</td>
                                     <td>{{$alquiler ->alq_valor}} </td>
-                                    <td>{{$alquiler ->pelicula -> genero->gen_nombre}}</td>
+                                    <td>{{$alquiler ->pelicula -> genero -> gen_nombre}}</td>
                                 </tr>
                             @endforeach
                         </tbody>

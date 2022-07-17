@@ -18,36 +18,34 @@
             <div class="col-md-12">
                 <div class="card">
                     <table class="table table-bordered " id="tabla">
+                    
                         <thead>
+                        
                             <tr>
-                                <th>Nombre pelicula</th>
-                                <th>Precio</th>
-                                <th>Nombre socio</th>
-                                <th>Fecha alquiler</th>
-                                <th>Fecha devolucion</th>
-                                <th>Costo retraso alquiler</th>
+                                <th>Nombre de la pelicula</th>
+                                <th>Genero</th>
+                                <th>Valor</th>
                                 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($alquileres as $row)
+                            @foreach($peliculas as $row)
                             <tr>
-                                <td>{{$row -> pelicula ->pel_nombre}}</td>
-                                <td>{{$row -> alq_valor}}</td>
-                                <td>{{$row -> socio-> soc_nombre}}</td>
-                                <td>{{$row -> alq_fecha_desde}}</td>
-                                <td>{{$row -> alq_fecha_hasta}}</td>
+                                <td>{{$row -> pel_nombre}}</td>
+                                <td>{{$row -> genero -> gen_nombre }}</td>
                                 <td>{{$row -> pel_costo}}</td>
-                                
+                            
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    
                 </div>
-                    <div>
-                        <button  type="button" class="btn btn-danger active" data-bs-toggle="button" aria-pressed="true"><a href="{{route('pdfs.economy')}}">PDF</a></button>
-                    </div>
+            </div>
+            <div>
+                <button  type="button" class="btn btn-danger"><a href="{{ route('pdfs.economy') }}">pdf</a></button>
+            </div>
+            <div>
+                <button  type="button" class="btn btn-info"><a href="{{ route('downloads.economy') }}">download pdf</a></button>
             </div>
         </div>
     </div>

@@ -20,25 +20,31 @@
                     <table class="table table-bordered " id="tabla">
                         <thead>
                             <tr>
-                                <th>Nombre de la pelicula</th>
-                                <th>Nombre del socio</th>
-                                <th>veces alquilada</th>
+                                <th>Genero</th>
+                                <th>Nombre</th>
+                                <th>Costo</th>
                                 <th>Fecha de estreno</th>
-                                
+                                <th>Pedidos</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($peliculas as $row)
-                            <tr>
-                                <td>{{$row -> pel_nombre}}</td>
-                                <td>{{$row -> pel_nombre}}</td>
-                                <td>{{$row -> pel_nombre}}</td>
-                                <td>{{$row -> pel_fecha_estreno}}</td>
-                            </tr>
-                            @endforeach
+                                <tr>
+                                    <td>{{$row-> pel_nombre}}</td>
+                                    <td>{{$row -> pel_fercha_estreno}}</td>
+                                    <td>{{$row -> genero -> gen_nombre}}</td>
+                                    <td>{{$row -> director -> dir_nombre}}</td>
+                                </tr>
+                            @endforeach  
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div>
+                <button  type="button" class="btn btn-danger"><a href="{{ route('pdfs.movieRental') }}">pdf</a></button>
+            </div>
+            <div>
+                <button  type="button" class="btn btn-info"><a href="{{ route('downloads.movieRental') }}">download pdf</a></button>
             </div>
         </div>
     </div>

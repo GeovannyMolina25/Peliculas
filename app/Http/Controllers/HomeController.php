@@ -20,6 +20,7 @@ use http\Controllers\auth;
 use PDF;
 
 
+
 class HomeController extends Controller
 {
     /**
@@ -42,11 +43,13 @@ class HomeController extends Controller
         $peliculas = Pelicula::all();
         $generos = Genero::all();
         $data = [];
-        
+        foreach($generos as $genero){
+            $data['label'][] = $genero->gen_nombre;
+            $data['dataP'][] = Pelicula::all()->where('gen_id',$genero->id)->count();
+        }
         $data['data'] = json_encode($data);
         return view('reports.movie',[
-            'peliculas' => $peliculas,
-            'generos'=>$generos
+            'peliculas' => $peliculas
         ],$data);
     }
     public function partner()
@@ -60,54 +63,67 @@ class HomeController extends Controller
     public function rental()
     {
         $alquileres = Alquiler::all();
-        $generos=Genero::all();
         return view('reports.rental',[
-            'alquileres'=>$alquileres,
-            'generos'=>$generos
+            'alquileres'=>$alquileres
         ]);
     }
 
     public function economy()
     {
-        $peliculas = Pelicula::all();
-        $alquileres = Alquiler::all();
+        $pelicula = Pelicula::all();
         return view('reports.economy',[
-            'peliculas'=>$peliculas,
-            'alquileres'=>$alquileres
+            'peliculas'=>$pelicula
         ]);
+    }
+    public function pdfeconomy()
+    {
+        $peliculas = Pelicula::paginate();
+        $pdf = PDF::loadView('pdfs.economy',[
+            'peliculas'=>$peliculas
+        ]);
+        
+        return $pdf->stream();
+        
+    }
+    public function downloadEconomy()
+    {
+        $peliculas = Pelicula::paginate();
+        $pdf = PDF::loadView('downloads.economy',[
+            'peliculas'=>$peliculas
+        ]);
+        
+        return $pdf->download('___economy.pdf');
+        
     }
 
     public function movieRental()
     {
         $peliculas = Pelicula::all();
-        $alquileres = Alquiler::all();
         return view('reports.movieRental',[
-            'peliculas'=>$peliculas,
-            'alquileres'=>$alquileres
+            'peliculas'=>$peliculas
         ]
         );
     }
-
-    public function economyPDF()
+    public function pdfmovieRental()
     {
-        $alquileres = Alquiler::paginate();
+        $peliculas = Pelicula::paginate();
+        $pdf = PDF::loadView('pdfs.movieRental',[
+            'peliculas'=>$peliculas
+        ]);
         
-        $pdf = PDF::loadView('pdfs.economy',['alquileres'=>$alquileres]);
-        //$pdf->loadHTML('<h1>Test</h1>');
         return $pdf->stream();
+        
     }
-
-    public function movieRentalPDF()
+    public function downloadMovieRental()
     {
-        $peliculas = Pelicula::all();
-        $alquileres = Alquiler::all();
-        return view('pdfs.movieRental',[
-            'peliculas'=>$peliculas,
-            'alquileres'=>$alquileres
-        ]
-        );
+        $peliculas = Pelicula::paginate();
+        $pdf = PDF::loadView('downloads.movieRental',[
+            'peliculas'=>$peliculas
+        ]);
+        
+        return $pdf->download('___movieRental.pdf');
+        
     }
-
 
 
 
@@ -148,7 +164,8 @@ class HomeController extends Controller
         $generos = Genero::all();
         $formatos = Formato::all();
         
-    
+        //$dataNum_F = Pelicula::whereBetween('updated_at',['2021-06-05','2022-07-07'])->count();
+        //$dataNum_P = Pelicula::all()->count();
         
         $data =[];
         $dataP =[];
@@ -166,7 +183,12 @@ class HomeController extends Controller
             //$data['labelP'] = Socio::all()->where('soc_nombre',$peliculas->id)->count();
         }
         
-      
+        /*
+        foreach($peliculas as $pelicula){
+            $dataP['labelP'][] = $pelicula->pel_nombre;
+            $dataP['dataP'][] = Alquiler::all()->where('pel_id',$pelicula->id)->count();
+        }
+        */
         $data['data'] = json_encode($data);
         //$dataP['data'] = json_encode($dataP);
         

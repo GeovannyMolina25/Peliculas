@@ -27,11 +27,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($peliculas as $row)
+                            @foreach($peliculas as $pelicula)
                                 <tr>
-                                    <td>{{ $row -> pel_nombre}}</td>
-                                    <td>{{ $row -> genero ->gen_nombre}}</td>
-                                    <td>{{ $row-> pel_costo}}</td>
+                                    <td>{{ $pelicula -> pel_nombre}}</td>
+                                    <td>{{ $pelicula -> genero -> gen_nombre}}</td>
+                                    <td>{{ $pelicula -> pel_costo}}</td>
                                     
                                 </tr>
                             @endforeach
@@ -39,7 +39,11 @@
                     </table>
                 </div>
                 <div>
-   
+                <script>
+                        const cData = JSON.parse('<?php echo $data; ?>');
+						console.log(cData);
+                        <td>[cData]</td>
+                    </script>
                         
                 </div>
             </div>
